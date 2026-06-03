@@ -56,14 +56,13 @@ export default function Home() {
         {/* Hero — work-first identity */}
         <section className="grid-bg relative border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
-            <SectionLabel>Software Studio — Est. 2026</SectionLabel>
+            <SectionLabel>Software — Est. 2026</SectionLabel>
             <h1 className="mt-6 max-w-4xl text-balance text-4xl font-medium leading-[1.05] tracking-tight sm:text-6xl">
               We build and operate digital products.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-              Coordinators is a software studio. We design, engineer, and run
-              our own software — and partner with technology teams on the hard
-              parts.
+              We design, engineer, and run our own software — and partner with
+              technology teams on the hard parts.
             </p>
           </div>
         </section>
@@ -76,8 +75,8 @@ export default function Home() {
               In the making.
             </p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-              The studio exists to build. We&rsquo;re heads-down on the first
-              products — they&rsquo;ll live here.
+              We exist to build. We&rsquo;re heads-down on the first products —
+              they&rsquo;ll live here.
             </p>
           </div>
         </section>
@@ -111,10 +110,10 @@ export default function Home() {
               what you&rsquo;re working on.
             </p>
             <a
-              href="mailto:hello@coordinators.studio"
+              href="mailto:hello@coordinators.com"
               className="mt-8 block text-3xl font-medium tracking-tight transition-colors hover:text-accent sm:text-5xl"
             >
-              hello@coordinators.studio
+              hello@coordinators.com
             </a>
             <p className="mt-6 text-muted">Coordinators, LLC — Delaware</p>
           </div>

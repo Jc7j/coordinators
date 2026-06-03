@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Coordinators — Software Studio",
+  title: "Coordinators",
   description:
-    "Coordinators is a software studio that builds and operates digital products, and partners with technology teams on the hard parts.",
+    "Coordinators build and operate digital products, and partner with technology teams on the hard parts.",
 };
 
 // Set theme before paint to avoid a flash of the wrong mode.

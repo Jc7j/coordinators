@@ -1,8 +1,8 @@
 # Coordinators
 
-A software studio. We build and operate digital products, and partner with technology teams on the hard parts.
+We build and operate digital products, and partner with technology teams on the hard parts.
 
-This is the studio's marketing site — Next.js (App Router), Tailwind v4, light/dark themes.
+This is the marketing site — Next.js (App Router), Tailwind v4, light/dark themes.
 
 ## Develop
 
