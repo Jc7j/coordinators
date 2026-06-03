@@ -54,17 +54,6 @@ export default function OpengraphImage() {
           We build and operate digital products.
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: 22,
-          color: "#888fa0",
-        }}
-      >
-        <div style={{ display: "flex" }}>{site.email}</div>
-        <div style={{ display: "flex" }}>36.1699° N, 115.1398° W</div>
-      </div>
     </div>,
     { ...size },
   );

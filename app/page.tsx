@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { site } from "@/lib/site";
 
 const services = [
   {
@@ -42,12 +41,6 @@ export default function Home() {
               className="text-muted transition-colors hover:text-foreground"
             >
               Work
-            </a>
-            <a
-              href="#contact"
-              className="text-muted transition-colors hover:text-foreground"
-            >
-              Contact
             </a>
             <ThemeToggle />
           </nav>
@@ -102,30 +95,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Contact — secondary goal: inquire about services */}
-        <section id="contact" className="border-b border-border">
-          <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10">
-            <SectionLabel>Work with us</SectionLabel>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-              Building something, or need a team for the hard parts? Tell us
-              what you&rsquo;re working on.
-            </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="mt-8 block text-3xl font-medium tracking-tight transition-colors hover:text-accent sm:text-5xl"
-            >
-              {site.email}
-            </a>
-            <p className="mt-6 text-muted">Coordinators, LLC — Delaware</p>
-          </div>
-        </section>
       </main>
 
       <footer>
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-10 font-mono text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-10">
-          <span>© 2026 Coordinators, LLC</span>
-          <span>36.1699° N, 115.1398° W</span>
+        <div className="mx-auto max-w-6xl px-6 py-10 font-mono text-xs text-muted sm:px-10">
+          © 2026 Coordinators, LLC
         </div>
       </footer>
     </div>

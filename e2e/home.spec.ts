@@ -10,9 +10,6 @@ test.describe("home", () => {
       }),
     ).toBeVisible();
     await expect(page.getByText("In the making.")).toBeVisible();
-    await expect(
-      page.getByRole("link", { name: "hello@coordinators.com" }),
-    ).toHaveAttribute("href", "mailto:hello@coordinators.com");
   });
 
   test("theme toggle flips and persists across reload", async ({ page }) => {
@@ -27,10 +24,9 @@ test.describe("home", () => {
     await expect(html).toHaveClass(/dark/);
   });
 
-  test("nav anchors resolve to sections", async ({ page }) => {
+  test("nav anchor resolves to the work section", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator("#work")).toBeAttached();
-    await expect(page.locator("#contact")).toBeAttached();
   });
 
   test("has no console errors on load", async ({ page }) => {
