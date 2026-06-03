@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (toggle adds .dark on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light — tinted-cool neutrals, not pure gray */
+:root {
+  --background: #ffffff;
+  --foreground: #0f1218;
+  --muted: #5b6270;
+  --border: #e7e9ef;
+  --surface: #f7f8fb;
+  --faint: #edeff4; /* coordinate grid lines */
+  --accent: #2f53ff;
+}
+
+/* Dark — a different design, not an invert: lighter surfaces for depth, desaturated accent */
+.dark {
+  --background: #0a0c11;
+  --foreground: #e8ebf2;
+  --muted: #888fa0;
+  --border: #1f2330;
+  --surface: #13161f; /* lighter than bg = depth */
+  --faint: #171a24;
+  --accent: #7088ff; /* desaturated for dark */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: gray transparent;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+  ::selection {
+    background: var(--accent);
+    color: #ffffff;
+  }
+}
+
+/* Coordinate-grid signature motif */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, var(--faint) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--faint) 1px, transparent 1px);
+  background-size: 72px 72px;
+  background-position: center;
+}
