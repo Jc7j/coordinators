@@ -5,7 +5,17 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    # Bundle routine minor/patch bumps into one PR; majors still get their own
+    # (they need a manual look). Note: Dependabot can't update bun.lock, so CI
+    # installs non-frozen and bun.lock is refreshed locally after merging.
+    groups:
+      dependencies:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions:
+        patterns: ["*"]
