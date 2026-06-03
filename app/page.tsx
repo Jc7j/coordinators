@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Work — the point of the studio. Prime position; coming, not empty. */}
+        {/* Work — prime position; coming, not empty. */}
         <section id="work" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-28">
             <SectionLabel>Work</SectionLabel>

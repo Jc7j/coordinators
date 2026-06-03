@@ -6,8 +6,8 @@ export type Project = {
   href?: string;
 };
 
-// The studio's work. Add a project = add an entry. Ownership of each product's
-// entity stays separate — this list shows what Coordinators built, not what it owns.
+// The work. Add a project = add an entry. Ownership of each product's entity
+// stays separate — this list shows what Coordinators built, not what it owns.
 export const projects: Project[] = [
   {
     name: "CourtConnect",
