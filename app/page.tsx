@@ -1,5 +1,4 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { projects } from "@/lib/projects";
 
 const services = [
   {
@@ -54,46 +53,42 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Hero */}
+        {/* Hero — work-first identity */}
         <section className="grid-bg relative border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-36">
             <SectionLabel>Software Studio — Est. 2026</SectionLabel>
             <h1 className="mt-6 max-w-4xl text-balance text-4xl font-medium leading-[1.05] tracking-tight sm:text-6xl">
-              We build and operate digital products — and partner with
-              technology teams on the hard parts.
+              We build and operate digital products.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-              Coordinators is a multidisciplinary software studio. We design,
-              engineer, and run our own products, and embed with teams who need
-              the difficult parts done right.
+              Coordinators is a software studio. We design, engineer, and run
+              our own software — and partner with technology teams on the hard
+              parts.
             </p>
-            <div className="mt-10 flex items-center gap-4">
-              <a
-                href="#contact"
-                className="rounded-md bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
-              >
-                Get in touch
-              </a>
-              <a
-                href="#work"
-                className="rounded-md border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-foreground"
-              >
-                See the work
-              </a>
-            </div>
           </div>
         </section>
 
-        {/* What we do */}
-        <section className="border-b border-border">
+        {/* Work — the point of the studio. Prime position; coming, not empty. */}
+        <section id="work" className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-28">
+            <SectionLabel>Work</SectionLabel>
+            <p className="mt-8 max-w-3xl text-3xl font-medium leading-[1.1] tracking-tight sm:text-5xl">
+              In the making.
+            </p>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+              The studio exists to build. We&rsquo;re heads-down on the first
+              products — they&rsquo;ll live here.
+            </p>
+          </div>
+        </section>
+
+        {/* How we work — secondary; the inquiry hook */}
+        <section id="approach" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10">
-            <SectionLabel>What we do</SectionLabel>
+            <SectionLabel>How we work</SectionLabel>
             <div className="mt-10 grid border-l border-t border-border sm:grid-cols-3">
               {services.map((s) => (
-                <div
-                  key={s.no}
-                  className="border-b border-r border-border p-8"
-                >
+                <div key={s.no} className="border-b border-r border-border p-8">
                   <span className="font-mono text-xs text-muted">{s.no}</span>
                   <h3 className="mt-4 text-xl font-medium tracking-tight">
                     {s.title}
@@ -107,44 +102,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Work */}
-        <section id="work" className="border-b border-border">
-          <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10">
-            <SectionLabel>Selected work</SectionLabel>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              {projects.map((p) => (
-                <article
-                  key={p.name}
-                  className="flex flex-col rounded-lg border border-border bg-surface p-8 transition-colors hover:border-foreground/30"
-                >
-                  <h3 className="text-2xl font-medium tracking-tight">
-                    {p.name}
-                  </h3>
-                  <p className="mt-3 flex-1 leading-relaxed text-muted">
-                    {p.blurb}
-                  </p>
-                  <div className="mt-8 flex items-center justify-between font-mono text-xs text-muted">
-                    <span className="uppercase tracking-[0.15em]">{p.tag}</span>
-                    <span>{p.year}</span>
-                  </div>
-                </article>
-              ))}
-              <article className="flex min-h-44 flex-col items-start justify-end rounded-lg border border-dashed border-border p-8">
-                <p className="font-mono text-xs uppercase tracking-[0.15em] text-muted">
-                  More in the works
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact */}
+        {/* Contact — secondary goal: inquire about services */}
         <section id="contact" className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10">
-            <SectionLabel>Get in touch</SectionLabel>
+            <SectionLabel>Work with us</SectionLabel>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+              Building something, or need a team for the hard parts? Tell us
+              what you&rsquo;re working on.
+            </p>
             <a
               href="mailto:hello@coordinators.studio"
-              className="mt-6 block text-3xl font-medium tracking-tight transition-colors hover:text-accent sm:text-5xl"
+              className="mt-8 block text-3xl font-medium tracking-tight transition-colors hover:text-accent sm:text-5xl"
             >
               hello@coordinators.studio
             </a>
