@@ -3,8 +3,8 @@
 export const site = {
   name: "Coordinators",
   url:
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://coordinators-phi.vercel.app",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.coordinators.build",
   description:
     "Coordinators build and operate digital products, and partner with technology teams on the hard parts.",
-  email: "hello@coordinators.com",
+  email: "hello@coordinators.build",
 } as const;
