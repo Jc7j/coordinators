@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { site } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Coordinators",
-  description:
-    "Coordinators build and operate digital products, and partner with technology teams on the hard parts.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: site.name,
+    template: `%s — ${site.name}`,
+  },
+  description: site.description,
+  openGraph: {
+    type: "website",
+    url: site.url,
+    siteName: site.name,
+    title: site.name,
+    description: site.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
 };
 
 // Set theme before paint to avoid a flash of the wrong mode.
